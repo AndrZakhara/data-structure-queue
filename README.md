@@ -1,1 +1,1 @@
-Implementation of Queue in Javascript
+Implementation of Stack in Javascript
