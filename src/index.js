@@ -1,7 +1,7 @@
-class Queue {
+class Stack {
   constructor() {
     this.items = [];
   }
 }
 
-export default Queue;
+export default Stack;
