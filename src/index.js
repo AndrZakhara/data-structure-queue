@@ -5,6 +5,9 @@ class Stack {
   }
 
   push(elem) {
+    if (typeof elem === 'undefined') {
+      return;
+    }
     this.length += 1;
     this.elements[this.length - 1] = elem;
   }
@@ -66,6 +69,11 @@ class Stack {
     });
 
     return newArr;
+  }
+
+  clear() {
+    this.elements.length = 0;
+    this.length = 0;
   }
 }
 
