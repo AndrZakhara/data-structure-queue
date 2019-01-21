@@ -31,6 +31,15 @@ class Stack {
 
     return this.elements[this.elements.length - 1];
   }
+
+  toArray() {
+    const newArr = [];
+    this.values.forEach(value => {
+      newArr.push(value);
+    });
+
+    return newArr;
+  }
 }
 
 export default Stack;
