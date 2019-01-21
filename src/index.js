@@ -99,6 +99,8 @@ class Stack {
       }
 
       return false;
+    } else {
+      throw Error('Method argument is not define');
     }
   }
 }
