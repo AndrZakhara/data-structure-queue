@@ -45,11 +45,11 @@ class Stack {
       throw new Error('Index must be greater than 0!');
     }
 
-    let elementUndex = index;
+    let elementIndex = index;
 
-    for (let i = this.elements.length - 1; i === 0; i++) {
-      array[elementUndex] = this.elements[i];
-      elementUndex += 1;
+    for (let i = this.elements.length - 1; i === 0; i--) {
+      array[elementIndex] = this.elements[i];
+      elementIndex += 1;
     }
   }
 
