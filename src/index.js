@@ -73,6 +73,7 @@ class Stack {
 
   clear() {
     this.elements.length = 0;
+    this.length = 0;
   }
 }
 
