@@ -34,9 +34,11 @@ class Stack {
       return;
     }
 
+    const element = this.elements[this.length - 1];
+
     this.length -= 1;
 
-    return this.elements.splice(this.elements.length - 1, 1)[0];
+    return element;
   }
 
   peek() {
