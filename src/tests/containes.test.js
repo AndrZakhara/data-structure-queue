@@ -6,16 +6,17 @@ describe('tests for method copyTo', () => {
 
   beforeEach(() => {
     stack = new Stack();
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
   });
 
-  test('Throw error if one of the arguments is not an Array', () => {
-   
+  test('throw error if element is undefined', () => {
+    expect(() => {
+      stack.containes();
+    }).toThrow();
   });
 
-  test('Throw error if index < 0', () => {
-
+  test('', () => {
+    const element = () => {};
+    
+    expect(stack.containes(element)).toBeTruthy();
   });
 });
