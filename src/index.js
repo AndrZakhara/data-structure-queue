@@ -12,6 +12,17 @@ class Stack {
   isEmpty() {
     return this.length === 0;
   }
+
+  clone() {
+    const stack = new Stack();
+
+    this.values.forEach(value => {
+      stack.push(value);
+    });
+    stack.length = this.values.length;
+
+    return stack;
+  }
 }
 
 export default Stack;
