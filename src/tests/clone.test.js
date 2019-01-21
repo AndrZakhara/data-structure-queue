@@ -12,7 +12,16 @@ describe('tests for method clone', () => {
 
   });
 
-  test('method return new stack ', () => {
-    
+  test(
+    'should return a new stack where the length is equal to the length of the original stack', 
+    () => {
+    const newStack = stack.clone();
+
+    expect(stack.length === newStack.length).toBeTruthy();
+  });
+
+  test('new stack must be Object', () => {
+    const newStack = stack.clone();
+    expect(newStack).toBeInstanceOf(Object);
   });
 });

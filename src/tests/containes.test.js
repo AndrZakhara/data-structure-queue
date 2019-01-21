@@ -10,13 +10,21 @@ describe('tests for method copyTo', () => {
 
   test('throw error if element is undefined', () => {
     expect(() => {
-      stack.containes();
+      stack.contains();
     }).toThrow();
   });
 
-  test('', () => {
-    const element = () => {};
+  test('if argument is a function method must return true', () => {
+    const element = () => 5;
+    stack.push(() => 5);
     
-    expect(stack.containes(element)).toBeTruthy();
+    expect(stack.contains(element)).toBeTruthy();
+  });
+
+  test('if argument is an Object method must return true', () => {
+    const element = {};
+    stack.push({});
+    
+    expect(stack.contains(element)).toBeTruthy();
   });
 });
