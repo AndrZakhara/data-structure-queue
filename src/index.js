@@ -47,7 +47,7 @@ class Stack {
 
     let elementIndex = index;
 
-    for (let i = this.elements.length - 1; i === 0; i--) {
+    for (let i = this.elements.length - 1; i >= 0; i--) {
       array[elementIndex] = this.elements[i];
       elementIndex += 1;
     }
