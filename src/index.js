@@ -31,6 +31,21 @@ class Stack {
 
     return this.elements[this.elements.length - 1];
   }
+
+  copyTo(array, index) {
+    if (!(array instanceof Array)) {
+        throw new Error(`${array} is not an Array!`);
+    }
+
+    if (index < 0) {
+        throw new Error('Index must be greater than 0!');
+    }
+
+    for (let i = 0; i < this.elements.length; i++) {
+        array[index] = this.elements[i];
+        index++;
+    }
+  }
 }
 
 export default Stack;
