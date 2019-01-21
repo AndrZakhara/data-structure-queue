@@ -1,4 +1,4 @@
-const deepEqual = require('deep-equal');
+
 
 class Stack {
   constructor() {
@@ -83,12 +83,6 @@ class Stack {
       for (let i = 0; i < this.elements.length; i++) {
         if (this.elements[i] === element) {
           return true;
-        }
-
-        if (typeof element === 'object') {
-          if (deepEqual(this.elements[i], element)) {
-            return true;
-          }
         }
 
         if (typeof element === 'function') {
