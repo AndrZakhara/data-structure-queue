@@ -1,4 +1,4 @@
-const deepEqual = require('deep-equal');
+import deepEqual from 'deep-equal';
 
 class Stack {
   constructor() {
@@ -10,6 +10,7 @@ class Stack {
     if (typeof elem === 'undefined') {
       return;
     }
+
     this.length += 1;
     this.elements[this.length - 1] = elem;
   }
@@ -35,7 +36,6 @@ class Stack {
     }
 
     const element = this.elements[this.length - 1];
-
     this.length -= 1;
 
     return element;
