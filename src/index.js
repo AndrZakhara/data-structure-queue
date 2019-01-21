@@ -5,6 +5,9 @@ class Stack {
   }
 
   push(elem) {
+    if (typeof elem === 'undefined') {
+      return;
+    }
     this.length += 1;
     this.elements[this.length - 1] = elem;
   }
