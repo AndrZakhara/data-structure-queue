@@ -25,7 +25,7 @@ class Stack {
   }
 
   pop() {
-    return this.elements.splice(this.items.length - 1, 1);
+    return this.elements.splice(this.elements.length - 1, 1);
   }
 
   peek() {
