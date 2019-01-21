@@ -23,6 +23,14 @@ class Stack {
 
     return stack;
   }
+
+  peek() {
+    if (this.elements.length === 0) {
+      throw new Error('Stack is empty!');
+    }
+
+    return this.elements[this.elements.length - 1];
+  }
 }
 
 export default Stack;
