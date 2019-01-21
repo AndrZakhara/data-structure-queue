@@ -67,6 +67,10 @@ class Stack {
 
     return newArr;
   }
+
+  clear() {
+    this.elements.length = 0;
+  }
 }
 
 export default Stack;
