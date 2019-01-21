@@ -6,7 +6,7 @@ class Stack {
 
   push(elem) {
     this.length += 1;
-    this.values[this.length - 1] = elem;
+    this.elements[this.length - 1] = elem;
   }
 
   isEmpty() {
@@ -16,12 +16,16 @@ class Stack {
   clone() {
     const stack = new Stack();
 
-    this.values.forEach(value => {
+    this.elements.forEach(value => {
       stack.push(value);
     });
-    stack.length = this.values.length;
+    stack.length = this.elements.length;
 
     return stack;
+  }
+
+  pop() {
+    return this.elements.splice(this.elements.length - 1, 1);
   }
 
   peek() {
@@ -45,6 +49,15 @@ class Stack {
         array[index] = this.elements[i];
         index++;
     }
+  }
+
+  toArray() {
+    const newArr = [];
+    this.elements.forEach(value => {
+      newArr.push(value);
+    });
+
+    return newArr;
   }
 }
 
