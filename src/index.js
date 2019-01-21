@@ -23,6 +23,10 @@ class Stack {
 
     return stack;
   }
+
+  pop() {
+    return this.elements.splice(this.items.length - 1, 1);
+  }
 }
 
 export default Stack;
