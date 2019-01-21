@@ -16,8 +16,6 @@ describe('tests for method peek', () => {
 
   test('throw error if array is empty', () => {
     const emptyStack = new Stack();
-    
-
-    expect(emptyStack.peek()).toThrow(Error);
+    expect(() => emptyStack.peek()).toThrow(Error);
   });
 });
