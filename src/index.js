@@ -27,6 +27,14 @@ class Stack {
   pop() {
     return this.elements.splice(this.items.length - 1, 1);
   }
+
+  peek() {
+    if (this.elements.length === 0) {
+      throw new Error('Stack is empty!');
+    }
+
+    return this.elements[this.elements.length - 1];
+  }
 }
 
 export default Stack;
