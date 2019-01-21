@@ -11,14 +11,16 @@ describe('tests for method isEmpty', () => {
     stack.push(3);
   });
 
-  test('method must return true or false', () => {
+  test('method must return true if array is empty', () => {
     let emptyArray = new Stack();
-
-    expect(stack.isEmpty()).toBeFalsy(),
     expect(emptyArray.isEmpty()).toBeTruthy()
   });
 
-  test('instance has method isEmpty', () => {
+  test('method must return false if array isn\'t empty', () => {
+    expect(stack.isEmpty()).toBeFalsy()
+  });
+
+   test('instance has method isEmpty', () => {
     expect(stack.isEmpty).toBeInstanceOf(Function);
   });
 });
