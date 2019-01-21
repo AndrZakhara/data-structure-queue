@@ -1,6 +1,7 @@
 class Stack {
   constructor() {
-    this.items = [];
+    this.elements = [];
+    this.length = this.elements.length;
   }
 }
 
