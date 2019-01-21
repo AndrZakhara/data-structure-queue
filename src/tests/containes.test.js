@@ -7,20 +7,15 @@ describe('tests for method copyTo', () => {
   beforeEach(() => {
     stack = new Stack();
     stack.push(1);
+    stack.push(2);
+    stack.push(3);
   });
 
   test('Throw error if one of the arguments is not an Array', () => {
-    const notArray = '';
-    
-    expect(() => {
-      stack.copyTo(notArray, 1)
-    }).toThrow();
+   
   });
 
   test('Throw error if index < 0', () => {
 
-    expect(() => {
-      stack.copyTo([1,2,3], -1)
-    }).toThrow();
   });
 });
