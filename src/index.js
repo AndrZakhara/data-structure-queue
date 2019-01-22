@@ -46,7 +46,9 @@ class Stack {
       throw new Error('Stack is empty!');
     }
 
-    return this.elements[this.elements.length - 1];
+    const { elements } = this;
+
+    return elements[elements.length - 1];
   }
 
   copyTo(array, index) {
