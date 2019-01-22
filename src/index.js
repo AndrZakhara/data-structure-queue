@@ -85,23 +85,21 @@ class Stack {
       throw Error('Method argument is not define');
     }
 
-    if (element !== undefined) {
-      for (let i = 0; i < this.elements.length; i++) {
-        if (this.elements[i] === element) {
-          return true;
-        }
-
-        if (typeof element === 'object' && deepEqual(this.elements[i], element)) {
-          return true;
-        }
-
-        if (typeof element === 'function' && String(element) === String(this.elements[i])) {
-          return true;
-        }
+    for (let i = 0; i < this.elements.length; i++) {
+      if (this.elements[i] === element) {
+        return true;
       }
 
-      return false;
+      if (typeof element === 'object' && deepEqual(this.elements[i], element)) {
+        return true;
+      }
+
+      if (typeof element === 'function' && String(element) === String(this.elements[i])) {
+        return true;
+      }
     }
+
+    return false;
   }
 }
 
