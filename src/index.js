@@ -3,7 +3,10 @@ import deepEqual from 'deep-equal';
 class Stack {
   constructor() {
     this.elements = [];
-    this.length = this.elements.length;
+  }
+
+  get length() {
+    return this.elements.length;
   }
 
   push(elem) {
@@ -11,8 +14,7 @@ class Stack {
       return;
     }
 
-    this.length += 1;
-    this.elements[this.length - 1] = elem;
+    this.elements.push(elem);
   }
 
   isEmpty() {
@@ -25,7 +27,6 @@ class Stack {
     this.elements.forEach(value => {
       stack.push(value);
     });
-    stack.length = this.elements.length;
 
     return stack;
   }
@@ -67,12 +68,7 @@ class Stack {
   }
 
   toArray() {
-    const newArr = [];
-    this.elements.forEach(value => {
-      newArr.push(value);
-    });
-
-    return newArr;
+    return this.elements.slice();
   }
 
   clear() {
