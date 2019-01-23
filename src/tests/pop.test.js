@@ -1,8 +1,7 @@
-/* eslint-disable */
 import Stack from '../index.js';
 
 describe('tests for method pop', () => {
-  let stack;
+  let stack = null;
 
   beforeEach(() => {
     stack = new Stack();
@@ -11,7 +10,14 @@ describe('tests for method pop', () => {
     stack.push(5);
   });
 
-  test('method must return deleted element', () => {    
+  test('method must delete last added element from stack', () => {
+    const elem = 'last element';
+    stack.push(elem);
+    expect(stack.pop()).toBe(elem);
+    expect(stack.contains(elem)).toBeFalsy();
+  });
+
+  test('method must return deleted element', () => {
     expect(stack.pop()).toBe(5);
   });
 
