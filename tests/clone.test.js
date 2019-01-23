@@ -1,4 +1,4 @@
-import Stack from '../index.js';
+import Stack from '../src/index.js';
 
 describe('tests for method clone', () => {
   let stack = null;
