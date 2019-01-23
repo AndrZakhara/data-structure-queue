@@ -1,5 +1,3 @@
-import deepEqual from 'deep-equal';
-
 class Stack {
   constructor() {
     this.elements = [];
@@ -36,10 +34,7 @@ class Stack {
       return;
     }
 
-    const element = this.elements[this.length - 1];
-    this.length -= 1;
-
-    return element;
+    return this.elements.pop();
   }
 
   peek() {
@@ -75,7 +70,6 @@ class Stack {
 
   clear() {
     this.elements.length = 0;
-    this.length = 0;
   }
 
   contains(element) {
@@ -85,14 +79,6 @@ class Stack {
 
     for (let i = 0; i < this.elements.length; i++) {
       if (this.elements[i] === element) {
-        return true;
-      }
-
-      if (typeof element === 'object' && deepEqual(this.elements[i], element)) {
-        return true;
-      }
-
-      if (typeof element === 'function' && String(element) === String(this.elements[i])) {
         return true;
       }
     }
