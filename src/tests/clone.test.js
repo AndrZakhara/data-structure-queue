@@ -1,8 +1,7 @@
-/* eslint-disable */
 import Stack from '../index.js';
 
 describe('tests for method clone', () => {
-  let stack;
+  let stack = null;
 
   beforeEach(() => {
     stack = new Stack();
@@ -18,8 +17,8 @@ describe('tests for method clone', () => {
       expect(newStack.length).toBe(3);
     });
 
-  test('new stack must be Object', () => {
+  test('new stack must be instance of class Stack', () => {
     const newStack = stack.clone();
-    expect(newStack).toBeInstanceOf(Object);
+    expect(newStack).toBeInstanceOf(Stack);
   });
 });
