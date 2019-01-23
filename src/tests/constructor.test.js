@@ -1,19 +1,17 @@
-/* eslint-disable */
 import Stack from '../index.js';
 
 describe('tests for constructor', () => {
-  let stack;
+  let stack = null;
   beforeEach(() => {
     stack = new Stack();
   });
 
-  test('should has a constructor in Queue ', () => {
+  test('should has a constructor in Stack ', () => {
     expect(Stack.prototype.constructor).toBe(Stack);
   });
 
-  test('should have own property count', () => {
-
-    expect(stack.hasOwnProperty('length')).toBeTruthy();
+  test('length of empty stack is 0', () => {
+    expect(stack.length).toBe(0);
   });
 });
 
