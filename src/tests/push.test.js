@@ -1,27 +1,34 @@
-/* eslint-disable */
 import Stack from '../index.js';
 
 describe('tests for method push', () => {
-  let stack;
+  let stack = null;
 
   beforeEach(() => {
     stack = new Stack();
   });
 
-  test('instance has not own property push', () => {
-    expect(stack.hasOwnProperty('push')).toBeFalsy();
+  test('method returns new length which bigger by 1 that prev length', () => {
+    let initLength = stack.length;
+    stack.push(1);
+    let newLength = stack.length;
+    expect(newLength).toBe(initLength + 1);
+
+    initLength = stack.length;
+    stack.push('text');
+    newLength = stack.length;
+    expect(newLength).toBe(initLength + 1);
+
+    initLength = stack.length;
+    stack.push([1, 2, 3]);
+    newLength = stack.length;
+    expect(newLength).toBe(initLength + 1);
   });
 
-  test('method returns new length', () => {
-    const expectedLength = stack.length + 1;
-    stack.push(4);
+  test('method don\'t change initial length if we push nothing', () => {
+    const initLength = stack.length;
+    stack.push();
     const newLength = stack.length;
 
-    expect(newLength).toBe(expectedLength);
-  });
-
-  test('method doesn\'t change length, if 0 argument is put', () => {
-    stack.push();
-    expect(stack.length).toBe(0);
+    expect(newLength).toBe(initLength);
   });
 });
