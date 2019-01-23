@@ -22,8 +22,10 @@ describe('tests for method pop', () => {
   });
 
   test('length of stack must reduce by 1', () => {
+    const initialLength = stack.length;
     stack.pop();
 
+    expect(stack.length).toBe(initialLength - 1);
     expect(stack.length).toBe(2);
   });
 
