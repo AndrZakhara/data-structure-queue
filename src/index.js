@@ -16,7 +16,7 @@ class Stack {
   }
 
   isEmpty() {
-    return this.length === 0;
+    return this.elements.length === 0;
   }
 
   clone() {
